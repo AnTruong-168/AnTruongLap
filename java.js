@@ -3,7 +3,7 @@ $(document).on("click","#signupbtn",Register)
 function Register(e)
 {
     e.preventDefault();
-    if ($("#cpassword").val() === $("password").val())
+    if ($("#cpassword").val() === $("#password").val())
     {
         var message = "Successfully created new Account";
     
