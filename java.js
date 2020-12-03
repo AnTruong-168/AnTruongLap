@@ -1,26 +1,21 @@
-$(document).on("click","#signupbtn",Checker)
+$(document).on("click","#signupbtn",Register)
 
-function Checker()
+function Register(e)
 {
-    var password = $("#cpassword").val();
-    var cpassword = $("#password").val();
-
-    if (password == cpassword && password != null)
+    e.preventDefault();
+    if ($("#cpassword").val() === $("password").val())
     {
-        Register();
+        var message = "Successfully created new Account";
+    
+        message += "\nUsername: " +$("#username").val();
+        message += "\nEmail: " + $("#email").val();
+        message += "\nPassword: " + $("#password").val()
+
+        alert(message);
     }
     else
     {
         alert("Hay kiem tra lai");
     }
-}
-function Register()
-{
-    var message = "Successfully created new Account";
     
-    message += "\nUsername: " +$("#username").val();
-    message += "\nEmail: " + $("#email").val();
-    message += "\nPassword: " + $("#password").val()
-
-    alert(message);
 }

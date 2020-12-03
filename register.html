@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Form</title>
+    </head>
+    <body>
+        <div id="formdiv">
+            <form>
+
+                <div id="error"></div>
+                <table>
+                    <tr>
+                        <td>Username:</td>
+                        <td><input type="text" required minlength="6" maxlength="30" id="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" placeholder="example@examplemail.com" required id="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td><input type="number" minlength="10" maxlength="11" id="pnumber"></td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth:</td>
+                        <td><input type="date" id="bday"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" required minlength="6" id="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Comfirm password:</td>
+                        <td><input type="password" required minlength="6" id="cpassword"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="reset" value="Reset">
+                        </td>
+                        <td>
+                            <input type="submit" value="Sign Up" id="signupbtn">
+                        </td>
+                    </tr>
+                </table>
+
+
+                
+                
+            </form>
+
+        </div>
+        <script src="jquery.js"></script>
+        <script src="java.js"></script>
+    </body>
+        
+    
+    
+</html>
+    
