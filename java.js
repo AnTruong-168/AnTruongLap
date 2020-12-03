@@ -1,5 +1,19 @@
-$(document).on("click","#signupbtn",Register)
+$(document).on("click","#signupbtn",Checker)
 
+function Checker()
+{
+    var password = $("#cpassword").val();
+    var cpassword = $("#password").val();
+
+    if (password == cpassword && password != null)
+    {
+        Register();
+    }
+    else
+    {
+        alert("Hay kiem tra lai");
+    }
+}
 function Register()
 {
     var message = "Successfully created new Account";
