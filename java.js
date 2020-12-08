@@ -5,17 +5,32 @@ function Register(e)
     e.preventDefault();
     if ($("#cpassword").val() === $("#password").val())
     {
-        var message = "Successfully created new Account";
-    
-        message += "\nUsername: " +$("#username").val();
-        message += "\nEmail: " + $("#email").val();
-        message += "\nPassword: " + $("#password").val()
-
-        alert(message);
-    }
-    else
-    {
-        alert("Hay kiem tra lai");
+        
+        $.ajax({
+            type: "POST",
+            url: "../php/register.php",
+            data: {
+                username : $("#username").val(),
+                password : $("#password").val(),
+                email : $("#email").val(),
+                phone : $("#pnumber").val(),
+                birthday : $("#bday").val(),
+            },
+            success: function( result ) {
+                result = $.parseJSON(result);
+                
+                if(result.success) {
+                    alert("Registered successfully!");
+                    location.href="login.html";
+                }
+                else {
+                    alert("Registered unsuccessfully!");
+                }
+            }
+        });
+    }    
+    else {
+        $("#error").text("* Password mismatched.\n");
     }
     
 }
