@@ -8,7 +8,7 @@ function Register(e)
         
         $.ajax({
             type: "POST",
-            url: "../php/register.php",
+            url: "register.php",
             data: {
                 username : $("#username").val(),
                 password : $("#password").val(),
